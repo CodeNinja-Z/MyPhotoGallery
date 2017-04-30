@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPhotoGallery</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag href: 'https://fonts.googleapis.com/css?family=Roboto', rel: 'stylesheet' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag src: 'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+    <%= yield %>
+  </body>
+</html>
