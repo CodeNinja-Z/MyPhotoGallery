@@ -1,0 +1,47 @@
+class Photo
+  # Purpose of not using ActiveRecord here is because each time the app 
+  # simply pulls the popular pictures from 500px API at that timastamp.
+  # It's not necessary to save them in local database.
+  require 'json'
+
+  attr_accessor :id, :name, :width, :height, :votes_count, :image_url, 
+    :photographer_full_name, :photographer_image, :photographer_city, 
+    :photographer_country
+
+  def initialize(params)
+    @id = params['id']
+    @name = params['name']
+    @width = params['width']
+    @height = params['height']
+    @votes_count = params['votes_count']
+    @image_url = params['image_url']
+    @photographer_full_name = params['user']['fullname']
+    @photographer_image = params['user']['userpic_url']
+    @photographer_city = params['user']['city']
+    @photographer_country = params['user']['country']
+  end
+
+  def self.get_top_hundred
+    begin
+      # Compose the query string to access the API to get top 100 photos with sorting 
+      # access_url = "https://api.500px.com/v1/photos?feature=popular"\
+      #   "&sort=rating&rpp=100&image_size=4&include_store=store_print"\
+      #   "&include_states=liked&consumer_key=#{Figaro.env.consumer_key}"
+      query = "?feature=popular&sort=rating&rpp=100&image_size=4"\
+      "&include_store=store_print&include_states=liked&"\
+      "consumer_key=#{Figaro.env.consumer_key}"
+
+      # response = F00px.get(access_url)
+      response = F00px.get("photos#{query}")
+      return response.body
+      # data = JSON.parse(response.body)
+
+      # Create Ruby objects based on each JSON photo object and save them temporarily
+      # data['photos'].map do |photo| 
+      #   Photo.new(photo)
+      # end
+    rescue StandardError => e
+      flash[:error] = [e.message]
+    end
+  end
+end
