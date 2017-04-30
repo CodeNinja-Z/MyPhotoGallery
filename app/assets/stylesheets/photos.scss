@@ -1,0 +1,47 @@
+@import "bootstrap";
+
+.caption {
+  @extend .text-center;
+
+  margin: 30px auto 30px;
+}
+
+.photos-container {
+  @extend .row;
+
+  .photo-container {
+    @extend .col-md-6;
+    @extend .col-lg-4;
+
+    margin-bottom: 30px;
+  }
+
+  .card {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.125);
+
+    .card-block {
+      padding: 10px 20px;
+
+      .card-title {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+
+      .card-text {
+        font-size: 0.85em;
+        margin-bottom: 10px;
+      }
+
+      hr {
+        margin: 10px auto;
+      }
+
+      .like-box {
+        .fa {
+          color: $red;
+          text-decoration: none;
+        }
+      }
+    }
+  } 
+}
