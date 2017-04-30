@@ -1,0 +1,32 @@
+<div class="container">
+  <h2 class="caption">Top 100 Photos on 500px</h2>
+  <div class="photos-container">
+    <% @photos.each do |photo| %>
+      <div class="photo-container">
+        <div class="card">
+          <div class="photo">
+
+            <%= image_tag(photo.image_url, alt: photo.name, class: 'img-fluid') %>
+          </div>
+
+          <div class="card-block">
+            <h4 class="card-title photo-name">
+              <%= photo.name %>
+            </h4>
+            <p class="card-text photographer-name">
+              by <%= photo.photographer_full_name %>
+            </p>
+
+            <hr>
+            <div class="like-box">
+              <%= link_to '#' do %>
+                <i class="fa fa-heart-o"></i>
+              <% end %>
+              <%= photo.votes_count %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
