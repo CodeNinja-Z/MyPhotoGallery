@@ -1,0 +1,39 @@
+body.landing-page {
+  background: #222 url('//pxportfolios.s3.amazonaws.com/assets/shared/background-7a26fa9a071b45f7c6d40bc43b0133bf.png');
+  // background: #222 url('../images/500px-background.png') center top no-repeat;
+  // background-size: cover;
+  // background-size: 100%;
+  overflow: hidden;
+
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // padding-bottom: 3rem;
+
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+
+}
+
+.out-wrapper {
+  // float: left;
+  // height: 50%;
+  // width: 50%; 
+
+  // margin-top: 25%;
+  // text-align: center;
+}
+
+.wrapper {
+  clear: both;
+  top: 50%;
+  left: 50%;
+  position: relative;
+  width: 680px;
+  height: 435px;
+  margin-left: auto;
+  margin-right: auto;
+}
