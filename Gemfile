@@ -20,10 +20,18 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
-gem 'figaro'
+# OAuth
+gem 'omniauth'
+gem 'omniauth-500px'
+
+# 500px API
 gem 'f00px'
+
+gem 'figaro'
+
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem "font-awesome-rails"
+# Bootstrap 4 popover and tooltip are based on tether
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
