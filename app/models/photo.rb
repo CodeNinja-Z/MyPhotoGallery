@@ -25,8 +25,7 @@ class Photo
     begin
       # Compose the query string to access the API to get top 100 photos with sorting 
       query = "?feature=popular&sort=rating&rpp=100&image_size=4"\
-      "&include_store=store_print&include_states=liked&"\
-      "consumer_key=#{Figaro.env.consumer_key}"
+      "&include_states=liked&consumer_key=#{Figaro.env.consumer_key}"
 
       response = F00px.get("photos#{query}")
       data = JSON.parse(response.body)
