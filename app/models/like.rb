@@ -14,8 +14,7 @@ class Like < ApplicationRecord
       client.post("photos/#{photo_id}/vote")
 
       # Create local like object
-      like = Like.new(user_id: user_id, photo_id: photo_id)
-      like.save!
+      like = Like.create!(user_id: user_id, photo_id: photo_id)
       return like
     rescue StandardError => e
       # Use puts here instead of flash message to prevent API problem
