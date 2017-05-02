@@ -8,25 +8,27 @@ describe SessionsController, type: :controller do
   describe "#create" do
     it "should successfully create a user" do
       expect {
-        post :create, provider: '500px'
+        post :create, params: { provider: '500px' }
       }.to change{ User.count }.by(1)
     end
  
     it "should successfully create a session" do
       session[:user_id].should be_nil
-      post :create, provider: '500px'
+      post :create, params: { provider: '500px' }
+
       session[:user_id].should_not be_nil
     end
  
     it "should redirect the user to the designated url" do
-      post :create, provider: '500px'
+      post :create, params: { provider: '500px' }
+
       response.should redirect_to photos_path
     end
   end
  
   describe "#destroy" do
     before do
-      post :create, provider: '500px'
+      post :create, params: { provider: '500px' }  
     end
  
     it "should clear the session" do
