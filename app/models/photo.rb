@@ -24,22 +24,17 @@ class Photo
   def self.get_top_hundred
     begin
       # Compose the query string to access the API to get top 100 photos with sorting 
-      # access_url = "https://api.500px.com/v1/photos?feature=popular"\
-      #   "&sort=rating&rpp=100&image_size=4&include_store=store_print"\
-      #   "&include_states=liked&consumer_key=#{Figaro.env.consumer_key}"
       query = "?feature=popular&sort=rating&rpp=100&image_size=4"\
       "&include_store=store_print&include_states=liked&"\
       "consumer_key=#{Figaro.env.consumer_key}"
 
-      # response = F00px.get(access_url)
       response = F00px.get("photos#{query}")
-      return response.body
-      # data = JSON.parse(response.body)
+      data = JSON.parse(response.body)
 
       # Create Ruby objects based on each JSON photo object and save them temporarily
-      # data['photos'].map do |photo| 
-      #   Photo.new(photo)
-      # end
+      data['photos'].map do |photo| 
+        Photo.new(photo)
+      end
     rescue StandardError => e
       flash[:error] = [e.message]
     end
