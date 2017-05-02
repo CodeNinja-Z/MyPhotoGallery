@@ -40,8 +40,8 @@ class Photo
     end
   end
 
-  def self.find(photo_id)
-    response = F00px.get("photos/#{photo_id}")
+  def self.find(id)
+    response = F00px.get("photos/#{id}")
     data = JSON.parse(response.body)
     photo = data['photo']
     Photo.new(photo)
