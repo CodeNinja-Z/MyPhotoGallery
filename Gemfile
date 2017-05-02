@@ -39,8 +39,8 @@ end
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-expectations'
   gem 'rails-controller-testing'
-  gem 'rspec-its'
   gem 'capybara', '~> 2.5'
 end
 
