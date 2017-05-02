@@ -1,3 +1,5 @@
+Applicaiton is constructed with Rails 5.0.2
+
 Tasks finished:
 1. Photo showcase
 2. 500px Interactions
@@ -7,10 +9,12 @@ Instruction to set up the app:
 Simply clone the repo, install the gems, run rails server and it is ready to go.
 
 UI redirection guide:
+The UI design was referred to a few online gallery sites. Most of them use the three-column layout so I followed the trend.
+
 1. Root path is the landing page requiring users to sign in using their 500px credentials, but users can still access the photo gallery page without signing in.
 
 2. (1) When a user is on the photo gallery page, she is able to like any picture by clicking the heart icon, the number next to the icon is the votes count. Each photo is clickable, redirecting the user to photo show page. The 'My Gallery' logo is clickable, redirecting the user back to photo gallery page.
-2. (2) When a user is on the photo gallery page and not signed in, she is still able to view the top 100 photos but if she clicks the heart icon to vote she will be asked to sign in with her 500px credentials. After signin in, she will be redirected to the photo gallery page.
+   (2) When a user is on the photo gallery page and not signed in, she is still able to view the top 100 photos but if she clicks the heart icon to vote she will be asked to sign in with her 500px credentials. After signin in, she will be redirected to the photo gallery page.
 
 3. Each photo on the gallery page is clickable, leading to the photo show page for better resolution picture and more information about that picture.
 
