@@ -4,15 +4,14 @@ class Photo
   # It's not necessary to save them in local database.
   require 'json'
 
-  attr_accessor :id, :name, :width, :height, :votes_count, :image_url, 
-    :voted, :photographer_full_name, :photographer_image, :photographer_city, 
+  attr_accessor :id, :name, :description, :votes_count, :image_url, :voted, 
+    :photographer_full_name, :photographer_image, :photographer_city, 
     :photographer_country
 
   def initialize(params)
     @id = params['id']
     @name = params['name']
-    @width = params['width']
-    @height = params['height']
+    @description = params['description']
     @votes_count = params['votes_count']
     @image_url = params['image_url']
     @voted = params['voted']
@@ -39,5 +38,12 @@ class Photo
     rescue StandardError => e
       puts[:error] = [e.message]
     end
+  end
+
+  def self.find(photo_id)
+    response = F00px.get("photos/#{photo_id}")
+    data = JSON.parse(response.body)
+    photo = data['photo']
+    Photo.new(photo)
   end
 end
