@@ -1,5 +1,11 @@
-require 'rails_helper'
+describe User, type: :model do
+  describe '#find_or_create_from_omniauth' do
+    subject(:user) {
+      User.find_or_create_from_omniauth(OmniAuth.config.mock_auth[:f00px])
+    }
 
-RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+    it 'successfully create a user' do
+      user.should be_valid
+    end
+  end
 end
