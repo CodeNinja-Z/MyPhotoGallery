@@ -16,7 +16,7 @@ class LikesController < ApplicationController
     redirect_back(fallback_location: photos_path)
   end
 
-  def delete
+  def destroy
     # Same as above stated
     if liked_photo.present?
       Like.unlike_photo(current_user.id, params[:photo_id])
