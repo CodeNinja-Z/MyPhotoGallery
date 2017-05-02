@@ -1,0 +1,37 @@
+.photo-box {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  .photo-name {
+    font-size: 2.2rem;
+    margin-top: 20px;
+    margin-top: 36px;
+  }
+
+  .photographer-image {
+    float: left;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .photographer-name {
+    font-size: 1.8em;
+    padding-top: 5px;
+    margin-left: 100px;
+  }
+
+  .photographer-location {
+    font-size: 1.2em;
+    margin-left: 100px;
+  }
+
+  hr {
+    margin-top: 36px;
+    margin-bottom: 32px;
+  }
+
+  .photo-description {
+    font-size: 1.2em;
+  }
+}
