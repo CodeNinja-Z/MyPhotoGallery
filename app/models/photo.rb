@@ -5,7 +5,7 @@ class Photo
   require 'json'
 
   attr_accessor :id, :name, :width, :height, :votes_count, :image_url, 
-    :photographer_full_name, :photographer_image, :photographer_city, 
+    :voted, :photographer_full_name, :photographer_image, :photographer_city, 
     :photographer_country
 
   def initialize(params)
@@ -15,6 +15,7 @@ class Photo
     @height = params['height']
     @votes_count = params['votes_count']
     @image_url = params['image_url']
+    @voted = params['voted']
     @photographer_full_name = params['user']['fullname']
     @photographer_image = params['user']['userpic_url']
     @photographer_city = params['user']['city']
