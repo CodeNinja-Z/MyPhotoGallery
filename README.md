@@ -9,6 +9,8 @@ Instruction to set up the app:
 Simply clone the repo, install the gems, run rails server and it is ready to go.
 
 UI redirection guide:
+The UI design was referred to a few online gallery sites. Most of them use the three-column layout so I followed the trend.
+
 1. Root path is the landing page requiring users to sign in using their 500px credentials, but users can still access the photo gallery page without signing in.
 
 2. (1) When a user is on the photo gallery page, she is able to like any picture by clicking the heart icon, the number next to the icon is the votes count. Each photo is clickable, redirecting the user to photo show page. The 'My Gallery' logo is clickable, redirecting the user back to photo gallery page.
