@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="photo-box col-md-10 offset-md-1">
+      <%= image_tag( @photo.image_url, alt: @photo.name, class: 'img-fluid' ) %>
+      <div class="photo-info">
+        <h2 class="photo-name"><%= @photo.name %></h2>
+
+        <hr>
+
+        <div class="photographer-info">
+          <%= image_tag(@photo.photographer_image, alt: @photo.photographer_full_name, class: 'photographer-image' ) %>
+          <div class="photographer-name">
+            <%= @photo.photographer_full_name %>
+          </div>
+          <div class="photographer-location">
+            <%= @photo.photographer_city %>
+            <%= @photo.photographer_country %>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="photo-description">
+          <%= @photo.description.html_safe %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
