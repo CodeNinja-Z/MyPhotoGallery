@@ -37,7 +37,7 @@ class Photo
         Photo.new(photo)
       end
     rescue StandardError => e
-      flash[:error] = [e.message]
+      puts[:error] = [e.message]
     end
   end
 end
