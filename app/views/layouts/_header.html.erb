@@ -5,7 +5,9 @@
         <a class="navbar-brand" href="#">
           <h2>MY GALLERY</h2>
         </a>
-        <%= link_to "Log Out", sign_out_path, method: :delete, class: 'navbar-items navbar-brand log-out' %>
+        <% if current_user %>
+          <%= link_to "Log Out", sign_out_path, method: :delete, class: 'navbar-items navbar-brand log-out' %>
+        <% end %>
       </div>
     </div>
   </div>
