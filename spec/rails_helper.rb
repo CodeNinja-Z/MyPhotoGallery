@@ -28,4 +28,5 @@ RSpec.configure do |config|
 
   # config.include Requests::JsonHelpers, type: :request
   # config.extend VCR::RSpec::Macros
+  config.include Capybara::DSL
 end
