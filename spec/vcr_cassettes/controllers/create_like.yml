@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.500px.com/v1/photos/210026037/vote
+    body:
+      encoding: UTF-8
+      string: consumer_key=GomuCwcPf3Kin6vaaX9yvfaG0cSxeepaT0crK90Q
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - OAuth oauth_consumer_key="GomuCwcPf3Kin6vaaX9yvfaG0cSxeepaT0crK90Q", oauth_nonce="b2da6b7ffaf24ef8702b7a4c4fbda028",
+        oauth_signature="fq5w6ziPWsU%2F%2Br0ae4%2FAOgnLaF4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1493726607", oauth_token="hFLzwAKp2fiAKytFzHVy3D5x7U8g5UxcgsEH2rZo",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Tue, 02 May 2017 12:03:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 400 Bad Request
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _hpx1=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJWU3MDYyYWFiNGFjYTM4OTNjZTIwZjkxNTM1YjNiMDUwBjsAVEkiCWhvc3QGOwBGIhJhcGkuNTAwcHguY29tSSIZd2FyZGVuLnVzZXIudXNlci5rZXkGOwBUWwdbBmkE5TBPAUkiIiQyYSQxMCRjQ3Y3NHBHN0pMUU14WDZTVzRRUXJlBjsAVA%3D%3D--fad0af17206aa981a866dd93ad09e0cde24934fa;
+        domain=.500px.com; path=/; HttpOnly
+      X-Request-Id:
+      - 4dcc13bb-5268-4c38-825a-9f056f729d7d
+      X-Runtime:
+      - '0.022727'
+      X-Rack-Cache:
+      - invalidate, pass
+      Server:
+      - api4
+    body:
+      encoding: UTF-8
+      string: '{"error":"Vote parameter has invalid value.","status":400}'
+    http_version: 
+  recorded_at: Tue, 02 May 2017 12:03:27 GMT
+recorded_with: VCR 3.0.3

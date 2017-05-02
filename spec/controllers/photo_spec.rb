@@ -2,12 +2,11 @@ describe PhotosController, type: :controller do
   describe '#index' do
     render_views
     before do
-      VCR.use_cassette 'controllers/index' do
+      VCR.use_cassette 'controllers/photos_index' do
         get :index
       end
     end
 
-    # it { should have_http_status 200 }
     it 'request will be 200 OK' do
       expect(response.status).to eq 200 
     end
