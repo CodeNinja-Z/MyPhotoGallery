@@ -36,10 +36,12 @@
         margin: 10px auto;
       }
 
-      .like-box {
+      .like-btn {
+        a {
+          text-decoration: none;
+        }
         .fa {
           color: $red;
-          text-decoration: none;
         }
       }
     }
