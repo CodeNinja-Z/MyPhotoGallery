@@ -5,7 +5,9 @@
       <div class="photo-container">
         <div class="card">
           <div class="photo">
-            <%= image_tag(photo.image_url, alt: photo.name, class: 'img-fluid') %>
+            <%= link_to photo_path(id: photo.id) do %>
+              <%= image_tag(photo.image_url, alt: photo.name, class: 'img-fluid') %>
+            <% end %>
           </div>
 
           <div class="card-block">

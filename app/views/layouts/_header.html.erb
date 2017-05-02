@@ -2,9 +2,10 @@
   <div class="container">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">
+        <%= link_to photos_path, class: 'navbar-brand' do %>
           <h2>MY GALLERY</h2>
-        </a>
+        <% end %>
+
         <% if current_user %>
           <%= link_to "Log Out", sign_out_path, method: :delete, class: 'navbar-items navbar-brand log-out' %>
         <% end %>
