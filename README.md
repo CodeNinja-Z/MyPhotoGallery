@@ -1,3 +1,5 @@
+Applicaiton is constructed with Rails 5.0.2
+
 Tasks finished:
 1. Photo showcase
 2. 500px Interactions
