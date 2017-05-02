@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.500px.com/v1/photos/210026037
+    body:
+      encoding: UTF-8
+      string: consumer_key=GomuCwcPf3Kin6vaaX9yvfaG0cSxeepaT0crK90Q
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - OAuth oauth_consumer_key="GomuCwcPf3Kin6vaaX9yvfaG0cSxeepaT0crK90Q", oauth_nonce="f9d71d4fbef1761fefed66966d50bf0d",
+        oauth_signature="ncsjM7jthFYcnEm11QAfr8vluck%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1493735104", oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 May 2017 14:25:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"f18cbbbae9d488e0526ec4ca0d7a5810"
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Set-Cookie:
+      - _hpx1=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTIwMzI2ZDUyYTdhMTg4NWEyMTBlYTc0N2RkOGY5NTM1BjsAVEkiCWhvc3QGOwBGIhJhcGkuNTAwcHguY29t--a4e2caad4a8c3ee6d573a3efe4c91dd7c36d416f;
+        domain=.500px.com; path=/; HttpOnly
+      X-Request-Id:
+      - 1aa69cee-7c87-4531-afa3-0fec88f49241
+      X-Runtime:
+      - '0.033605'
+      X-Rack-Cache:
+      - miss
+      Server:
+      - api4
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwaG90byI6eyJpZCI6MjEwMDI2MDM3LCJ1c2VyX2lkIjo0MjYxMzgsIm5hbWUiOiJUb3VjaGluZyBsaWdodHMiLCJkZXNjcmlwdGlvbiI6bnVsbCwiY2FtZXJhIjoiTklLT04gRDYxMCIsImxlbnMiOiI3MC4wLTIwMC4wIG1tIGYvNC4wIiwiZm9jYWxfbGVuZ3RoIjoiMTYwIiwiaXNvIjoiMjAwIiwic2h1dHRlcl9zcGVlZCI6IjEvMzIwIiwiYXBlcnR1cmUiOiI3LjEiLCJ0aW1lc192aWV3ZWQiOjEzODE4LCJyYXRpbmciOjg3LjcsInN0YXR1cyI6MSwiY3JlYXRlZF9hdCI6IjIwMTctMDUtMDFUMDI6MjI6NDAtMDQ6MDAiLCJjYXRlZ29yeSI6MjQsImxvY2F0aW9uIjpudWxsLCJsYXRpdHVkZSI6NDcuODEzMTU0NTE3NTI3NywibG9uZ2l0dWRlIjoxOS4wNjEyNzkyOTY4NzUsInRha2VuX2F0IjoiMjAxNy0wMy0zMVQwODozOTozNS0wNDowMCIsImhpX3Jlc191cGxvYWRlZCI6MCwiZm9yX3NhbGUiOmZhbHNlLCJ3aWR0aCI6MTUwMCwiaGVpZ2h0Ijo5ODAsInZvdGVzX2NvdW50Ijo3OTcsImZhdm9yaXRlc19jb3VudCI6MCwiY29tbWVudHNfY291bnQiOjQyLCJuc2Z3IjpmYWxzZSwic2FsZXNfY291bnQiOjAsImZvcl9zYWxlX2RhdGUiOm51bGwsImhpZ2hlc3RfcmF0aW5nIjo5OS42LCJoaWdoZXN0X3JhdGluZ19kYXRlIjoiMjAxNy0wNS0wMlQwMDoxMDo0Ny0wNDowMCIsImxpY2Vuc2VfdHlwZSI6MCwiY29udmVydGVkIjpmYWxzZSwiY29sbGVjdGlvbnNfY291bnQiOjI1LCJjcm9wX3ZlcnNpb24iOjAsImltYWdlX2Zvcm1hdCI6ImpwZWciLCJwb3NpdGl2ZV92b3Rlc19jb3VudCI6Nzk3LCJwcml2YWN5IjpmYWxzZSwicHJvZmlsZSI6dHJ1ZSwidXJsIjoiL3Bob3RvLzIxMDAyNjAzNy90b3VjaGluZy1saWdodHMtYnktYW5keTU4LWFuZHIlQzMlQTFzLXNjaGFmZXIiLCJpbWFnZV91cmwiOiJodHRwczovL2Ryc2Nkbi41MDBweC5vcmcvcGhvdG8vMjEwMDI2MDM3L20lM0Q5MDBfayUzRDFfYSUzRDEvMWNlMmJiM2RiOTRmYTg0N2QwODAzOWJlMTc5NzUzMjYiLCJpbWFnZXMiOlt7InNpemUiOjQsInVybCI6Imh0dHBzOi8vZHJzY2RuLjUwMHB4Lm9yZy9waG90by8yMTAwMjYwMzcvbSUzRDkwMF9rJTNEMV9hJTNEMS8xY2UyYmIzZGI5NGZhODQ3ZDA4MDM5YmUxNzk3NTMyNiIsImh0dHBzX3VybCI6Imh0dHBzOi8vZHJzY2RuLjUwMHB4Lm9yZy9waG90by8yMTAwMjYwMzcvbSUzRDkwMF9rJTNEMV9hJTNEMS8xY2UyYmIzZGI5NGZhODQ3ZDA4MDM5YmUxNzk3NTMyNiIsImZvcm1hdCI6ImpwZWcifV0sInN0b3JlX2Rvd25sb2FkIjpmYWxzZSwic3RvcmVfcHJpbnQiOmZhbHNlLCJzdG9yZV9saWNlbnNlIjpmYWxzZSwicmVxdWVzdF90b19idXlfZW5hYmxlZCI6ZmFsc2UsImxpY2Vuc2VfcmVxdWVzdHNfZW5hYmxlZCI6ZmFsc2UsImNvbnZlcnRlZF9iaXRzIjowLCJlZGl0b3JzX2Nob2ljZSI6ZmFsc2UsImVkaXRvcnNfY2hvaWNlX2RhdGUiOm51bGwsImZlYXR1cmUiOiJwb3B1bGFyIiwiZmVhdHVyZV9kYXRlIjoiMjAxNy0wNS0wMVQwMjoyNjo1Ni0wNDowMCIsImVkaXRvcmVkX2J5Ijp7fSwidXNlciI6eyJpZCI6NDI2MTM4LCJ1c2VybmFtZSI6IkFuZHk1OCIsImZpcnN0bmFtZSI6IiBBbmR5NTgvQW5kcsOhcyAiLCJsYXN0bmFtZSI6IlNjaGFmZXIiLCJjaXR5IjoiWnNhbWJlayIsImNvdW50cnkiOiJIdW5nYXJ5IiwidXNlcnR5cGUiOjAsImZ1bGxuYW1lIjoiQW5keTU4L0FuZHLDoXMgIFNjaGFmZXIiLCJ1c2VycGljX3VybCI6Imh0dHBzOi8vcGFjZG4uNTAwcHgub3JnLzQyNjEzOC9jOGRkNDgyYTk3MmRkZjQ1Zjk0ZWE2ZTZjNWE5Mzk5ZmRiNmE3NmUyLzEuanBnPzIiLCJ1c2VycGljX2h0dHBzX3VybCI6Imh0dHBzOi8vcGFjZG4uNTAwcHgub3JnLzQyNjEzOC9jOGRkNDgyYTk3MmRkZjQ1Zjk0ZWE2ZTZjNWE5Mzk5ZmRiNmE3NmUyLzEuanBnPzIiLCJjb3Zlcl91cmwiOiJodHRwczovL3BhY2RuLjUwMHB4Lm9yZy80MjYxMzgvYzhkZDQ4MmE5NzJkZGY0NWY5NGVhNmU2YzVhOTM5OWZkYjZhNzZlMi9jb3Zlcl8yMDQ4LmpwZz82IiwidXBncmFkZV9zdGF0dXMiOjAsInN0b3JlX29uIjp0cnVlLCJhZmZlY3Rpb24iOjY3NTExOCwiZm9sbG93ZXJzX2NvdW50IjoxMjMwNywiYXZhdGFycyI6eyJkZWZhdWx0Ijp7Imh0dHBzIjoiaHR0cHM6Ly9wYWNkbi41MDBweC5vcmcvNDI2MTM4L2M4ZGQ0ODJhOTcyZGRmNDVmOTRlYTZlNmM1YTkzOTlmZGI2YTc2ZTIvMS5qcGc/MiJ9LCJsYXJnZSI6eyJodHRwcyI6Imh0dHBzOi8vcGFjZG4uNTAwcHgub3JnLzQyNjEzOC9jOGRkNDgyYTk3MmRkZjQ1Zjk0ZWE2ZTZjNWE5Mzk5ZmRiNmE3NmUyLzIuanBnPzIifSwic21hbGwiOnsiaHR0cHMiOiJodHRwczovL3BhY2RuLjUwMHB4Lm9yZy80MjYxMzgvYzhkZDQ4MmE5NzJkZGY0NWY5NGVhNmU2YzVhOTM5OWZkYjZhNzZlMi8zLmpwZz8yIn0sInRpbnkiOnsiaHR0cHMiOiJodHRwczovL3BhY2RuLjUwMHB4Lm9yZy80MjYxMzgvYzhkZDQ4MmE5NzJkZGY0NWY5NGVhNmU2YzVhOTM5OWZkYjZhNzZlMi80LmpwZz8yIn19fSwiY29tbWVudHMiOltdLCJ3YXRlcm1hcmsiOnRydWUsImxpY2Vuc2luZ19yZXF1ZXN0ZWQiOmZhbHNlLCJsaWNlbnNpbmdfc3VnZ2VzdGVkIjpmYWxzZSwiaXNfZnJlZV9waG90byI6ZmFsc2V9LCJjb21tZW50cyI6W119
+    http_version: 
+  recorded_at: Tue, 02 May 2017 14:25:05 GMT
+recorded_with: VCR 3.0.3
