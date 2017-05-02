@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  # Associations
+  has_many :likes, dependent: :destroy
+
+  # Class methods
   def self.find_or_create_from_omniauth(auth_hash)
     user = find_by(provider: auth_hash['provider'], uid: auth_hash['uid']) || create_from_omniauth(auth_hash)
   end
