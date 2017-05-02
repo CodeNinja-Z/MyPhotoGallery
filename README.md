@@ -12,7 +12,7 @@ UI redirection guide:
 1. Root path is the landing page requiring users to sign in using their 500px credentials, but users can still access the photo gallery page without signing in.
 
 2. (1) When a user is on the photo gallery page, she is able to like any picture by clicking the heart icon, the number next to the icon is the votes count. Each photo is clickable, redirecting the user to photo show page. The 'My Gallery' logo is clickable, redirecting the user back to photo gallery page.
-2. (2) When a user is on the photo gallery page and not signed in, she is still able to view the top 100 photos but if she clicks the heart icon to vote she will be asked to sign in with her 500px credentials. After signin in, she will be redirected to the photo gallery page.
+   (2) When a user is on the photo gallery page and not signed in, she is still able to view the top 100 photos but if she clicks the heart icon to vote she will be asked to sign in with her 500px credentials. After signin in, she will be redirected to the photo gallery page.
 
 3. Each photo on the gallery page is clickable, leading to the photo show page for better resolution picture and more information about that picture.
 
