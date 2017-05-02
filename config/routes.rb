@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'photos#landing'
 
-  resources :photos, only: [:index]
+  resources :photos, only: [:index, :show]
   post '/photos/:photo_id/like', to: 'likes#create', as: 'like_photo'
   delete '/photos/:photo_id/unlike', to: 'likes#delete', as: 'unlike_photo'
 
