@@ -17,9 +17,25 @@
             </p>
 
             <hr>
-            <div class="like-box">
-              <%= link_to '#' do %>
-                <i class="fa fa-heart-o"></i>
+
+            <!-- # The implementation below is for demo purpose only to distinguish the unliked and liked photos. I won't use it in a real application since each time it hit the database 100 times. As the API doesn't return a photo's 'voted' boolean. This way is an alternative to make it different to the unliked and liked photos. -->
+            <!-- Refs: -->
+            <!-- 1. https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md -->
+            <!-- 2. https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format -->
+            <!-- The API returns photos, an array of Photo objects in short format, and short format doesn't have 'voted' variable.-->
+            <div class="like-btn">
+              <% if current_user && !current_user.likes.where(photo_id: photo.id).first %>
+                <%= link_to like_photo_path(photo_id: photo.id), method: :post do %>
+                  <i class="fa fa-heart-o"></i>
+                <% end %>
+              <% elsif current_user && current_user.likes.where(photo_id: photo.id).first %>
+                <%= link_to unlike_photo_path(photo_id: photo.id), method: :delete do %>
+                  <i class="fa fa-heart"></i>
+                <% end %>
+              <% else %>
+                <%= link_to '/auth/500px' do %>
+                  <i class="fa fa-heart-o"></i>
+                <% end %>
               <% end %>
               <%= photo.votes_count %>
             </div>
