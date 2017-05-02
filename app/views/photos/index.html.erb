@@ -12,9 +12,17 @@
             <h4 class="card-title photo-name">
               <%= photo.name %>
             </h4>
-            <p class="card-text photographer-name">
-              by <%= photo.photographer_full_name %>
-            </p>
+
+            <div class="photographer-info">
+              <%= image_tag(photo.photographer_image, alt: photo.photographer_full_name, class: 'photographer-image' ) %>
+              <div class="photographer-name">
+                <%= photo.photographer_full_name %>
+              </div>
+              <div class="photographer-location">
+                <%= photo.photographer_city %>
+                <%= photo.photographer_country %>
+              </div>
+            </div>
 
             <hr>
 
