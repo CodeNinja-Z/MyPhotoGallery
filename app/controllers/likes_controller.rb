@@ -15,7 +15,10 @@ class LikesController < ApplicationController
   end
 
   def delete
-    Like.unlike_photo(current_user.id, params[:photo_id])
+    # Same as above stated
+    if current_user.likes.where(photo_id: params[:photo_id]).first
+      Like.unlike_photo(current_user.id, params[:photo_id])
+    end
     redirect_back(fallback_location: photos_path)
   end
 end
