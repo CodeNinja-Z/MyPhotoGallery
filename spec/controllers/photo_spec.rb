@@ -16,4 +16,16 @@ describe PhotosController, type: :controller do
       expect(response).to render_template :index
     end 
   end
+
+  describe '#landing' do
+    before { get :landing }
+
+    it 'request will be 200 OK' do
+      expect(response.status).to eq 200 
+    end
+
+    it 'display the template' do
+      expect(response).to render_template :log_in
+    end 
+  end
 end
